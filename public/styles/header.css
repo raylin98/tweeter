@@ -1,12 +1,12 @@
 header {
-    height: 400px;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
-    background-color: #002c5c;
-    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100vw;
+    background-color: #001f3b;
+    background-image: url("https://www.transparenttextures.com/patterns/climpek.png");
 }
 
 .avatar {
@@ -20,4 +20,5 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    color: white;
 }
