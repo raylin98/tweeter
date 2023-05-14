@@ -29,7 +29,7 @@ section.new-tweet {
 	font-family: 'Bungee';
 	color: white;
 	background-color: #4056A1;
-	margin-top: 1em;
+	margin-top: 0.5em;
 }
 
 .counter {
@@ -45,4 +45,8 @@ section.new-tweet {
 	display:flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.charOver {
+	color: red;
 }
