@@ -3,6 +3,7 @@
   display:flex;
   background-color:transparent;
   font-family: "Source Sans Pro";
+  flex-direction: column
 }
 
 .tweets {
