@@ -32,6 +32,14 @@ $(document).ready(() => {
     }
   ];*/
 // changed to prepend to ensure new tweets loaded at the top rather than at the end and all older tweets displayed from bottom to top
+
+//escape function
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const result = createTweetElement(tweet);
@@ -51,7 +59,7 @@ $(document).ready(() => {
             <div class="display-name">${data.user.handle}</div>
           </div>
           <div class="tweet-msg">
-            ${data.content.text}
+            ${escape(data.content.text)}
           </div>
           <div class="dates"> 
             <h2 class="date-size">${timeago.format(data.created_at)}</h2>
