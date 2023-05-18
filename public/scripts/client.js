@@ -68,9 +68,21 @@ $(document).ready(() => {
 
   $('#tweet-submit').on('submit', (event) => {
     event.preventDefault();
+    const maxLength = 140;
+    const tweet = $('#tweet-text').val();
+    if (!tweet) {
+      return alert('Please enter text before submitting a Tweet');
+    } else if (tweet.length > maxLength ) {
+      return alert("You can only tweet messages with up to 140 characters!")
+    } else {
+      const formData = $('#tweet-submit').serialize();
+      $.post('/tweets', formData).then(loadTweets);
+      //clears submission textbox after submission
+      $('#tweet-text').val('');
+    }
     // const tweet = $('#tweet-text').val();
-    const formData = $('#tweet-submit').serialize();
-    $.post('/tweets', formData).then(loadTweets)
+    //const formData = $('#tweet-submit').serialize();
+    //$.post('/tweets', formData).then(loadTweets)
   });
 
   const loadTweets = function() {
