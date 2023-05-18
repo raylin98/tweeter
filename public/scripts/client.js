@@ -6,9 +6,6 @@
 
 //Dynamic Tweet Function
 
-
-
-
  const data = [
   {
     "user": {
@@ -67,5 +64,13 @@ const createTweetElement = function(data) {
 </section>`)
 }
 
+$('#tweet-submit').on('submit', (event) => {
+  event.preventDefault();
+//const tweet = $('#tweet-text').val();
+const formData = $('#tweet-submit').serialize();
+$.post('/tweets', formData).then((res) => {
+//console.log("api-response", res)
+})
+}) 
 
 renderTweets(data);
