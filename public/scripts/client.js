@@ -7,7 +7,7 @@
 //Dynamic Tweet Function
 
 $(document).ready(() => {
-  const data = [
+  /*const data = [
     {
       "user": {
         "name": "Newton",
@@ -30,7 +30,7 @@ $(document).ready(() => {
       },
       "created_at": 1461113959088
     }
-  ];
+  ];*/
 
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
@@ -41,7 +41,7 @@ $(document).ready(() => {
 
   const createTweetElement = function(data) {
     return $(`
-      <section class="tweet-container" id="tweets-container">
+      <section class="tweet-container">
         <article class="tweets">
           <div class="users-profile">
             <div class="name-picture">
@@ -54,7 +54,7 @@ $(document).ready(() => {
             ${data.content.text}
           </div>
           <div class="dates"> 
-            <h2 class="date-size">${data.created_at}</h2>
+            <h2 class="date-size">${timeago.format(data.created_at)}</h2>
             <div class="tweet-icons">
               <i class="fas fa-flag icon"></i>
               <i class="fas fa-retweet icon"></i>
@@ -70,10 +70,14 @@ $(document).ready(() => {
     event.preventDefault();
     // const tweet = $('#tweet-text').val();
     const formData = $('#tweet-submit').serialize();
-    $.post('/tweets', formData).then((res) => {
-      // console.log("api-response", res)
-    });
+    $.post('/tweets', formData).then(loadTweets)
   });
 
-  renderTweets(data);
+  const loadTweets = function() {
+    $.get('/tweets', function(tweet) {
+      renderTweets(tweet);
+    })
+  }
+
+  loadTweets();
 });
