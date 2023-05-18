@@ -31,11 +31,11 @@ $(document).ready(() => {
       "created_at": 1461113959088
     }
   ];*/
-
+// changed to prepend to ensure new tweets loaded at the top rather than at the end and all older tweets displayed from bottom to top
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const result = createTweetElement(tweet);
-      $(`#tweets-container`).append(result);
+      $(`#tweets-container`).prepend(result);
     }
   };
 
@@ -72,18 +72,30 @@ $(document).ready(() => {
     const tweet = $('#tweet-text').val();
     if (!tweet) {
       return alert('Please enter text before submitting a Tweet');
-    } else if (tweet.length > maxLength ) {
+    } 
+    
+    if (tweet.length > maxLength ) {
       return alert("You can only tweet messages with up to 140 characters!")
-    } else {
-      const formData = $('#tweet-submit').serialize();
-      $.post('/tweets', formData).then(loadTweets);
+    } 
+   
+    //made a new function to load post submit tweet as utilizing loadtweets made duplicate posts
+    const newTweet = function() {
+      $.get('/tweets', function(tweet) {
+        console.log("1",tweet[tweet.length-1])
+        renderTweets([tweet[tweet.length - 1]]);
+      })
+    }
+
+    const formData = $('#tweet-submit').serialize();
+      $.post('/tweets', formData).then(newTweet);
       //clears submission textbox after submission
       $('#tweet-text').val('');
-    }
+  
     // const tweet = $('#tweet-text').val();
     //const formData = $('#tweet-submit').serialize();
     //$.post('/tweets', formData).then(loadTweets)
   });
+  
 
   const loadTweets = function() {
     $.get('/tweets', function(tweet) {
