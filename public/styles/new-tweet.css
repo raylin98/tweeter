@@ -50,3 +50,19 @@ section.new-tweet {
 .charOver {
 	color: red;
 }
+
+#error-msg {
+	display:flex;
+	justify-content: space-evenly;
+}
+
+.errors {
+	display:flex;
+	border: 3.5px solid red;
+	padding:15px;
+}
+
+.fa-circle-exclamation {
+	margin-left: 10px;
+	margin-right: 10px;
+}

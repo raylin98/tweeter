@@ -80,6 +80,19 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!--Displaying Error Message-->
+      <section id="error-msg">
+        <span id="empty-error" class="errors">
+          <i class="fa-sharp fa-solid fa-circle-exclamation" style="color:red"></i>
+          Sorry, you cannot tweet empty tweets! Please enter text before submitting your tweet!
+          <i class="fa-sharp fa-solid fa-circle-exclamation" style="color:red"></i>
+        </span>
+        <span id="error-long" class="errors">
+          <i class="fa-sharp fa-solid fa-circle-exclamation" style="color:red"></i>
+          Tweet is too long! Tweets can only be up to 140 characters!
+          <i class="fa-sharp fa-solid fa-circle-exclamation" style="color:red"></i>
+        </span>
+      </section>
       <section class="new-tweet">
       <h2>Compose Tweet</h2>
         <form class="form" method="POST" action="/tweets/" id="tweet-submit">

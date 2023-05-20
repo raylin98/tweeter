@@ -7,31 +7,10 @@
 //Dynamic Tweet Function
 
 $(document).ready(() => {
-  /*const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];*/
-// changed to prepend to ensure new tweets loaded at the top rather than at the end and all older tweets displayed from bottom to top
+
+// Error msg hidden until error presents itself
+$("#empty-error").hide();
+$("#error-long").hide();
 
 //escape function
 const escape = function (str) {
@@ -78,12 +57,14 @@ const escape = function (str) {
     event.preventDefault();
     const maxLength = 140;
     const tweet = $('#tweet-text').val();
+    $("#empty-error").slideUp("slow");
+    $("#error-long").slideUp("slow");
     if (!tweet) {
-      return alert('Please enter text before submitting a Tweet');
+      return $("#empty-error").slideDown("slow");
     } 
     
     if (tweet.length > maxLength ) {
-      return alert("You can only tweet messages with up to 140 characters!")
+      return $("#error-long").slideDown("slow");
     } 
    
     //made a new function to load post submit tweet as utilizing loadtweets made duplicate posts
@@ -98,10 +79,6 @@ const escape = function (str) {
       $.post('/tweets', formData).then(newTweet);
       //clears submission textbox after submission
       $('#tweet-text').val('');
-  
-    // const tweet = $('#tweet-text').val();
-    //const formData = $('#tweet-submit').serialize();
-    //$.post('/tweets', formData).then(loadTweets)
   });
   
 
