@@ -60,11 +60,12 @@ const escape = function (str) {
     $("#empty-error").slideUp("slow");
     $("#error-long").slideUp("slow");
     if (!tweet) {
-      return $("#empty-error").slideDown("slow");
+      return $("#empty-error").slideDown("slow"), $("#error-long").hide();
+
     } 
     
     if (tweet.length > maxLength ) {
-      return $("#error-long").slideDown("slow");
+      return $("#error-long").slideDown("slow"),$("#empty-error").hide();
     } 
    
     //made a new function to load post submit tweet as utilizing loadtweets made duplicate posts
