@@ -6,17 +6,17 @@ This project was built using Javascript, jQuery, AJAX for the front-end. Express
 
 ## Final Product (With Screenshots)
 
-!["Tweeter Desktop Display"](link)
+!["Tweeter Desktop Display"](https://github.com/raylin98/tweeter/blob/master/public/images/tweeter-desktop.png)
 
-!["Tweeter Desktop Display with no tweet error message"](link)
+!["Tweeter Desktop Display with no tweet error message"](https://github.com/raylin98/tweeter/blob/master/public/images/tweeter-desktop-error1.png)
 
-!["Tweeter Desktop Display with too many characters error message"](link)
+!["Tweeter Desktop Display with too many characters error message"]((https://github.com/raylin98/tweeter/blob/master/public/images/tweeter-desktop-error2.png)
 
-!["Tweeter Mobile Display"](link)
+!["Tweeter Mobile Display"](https://github.com/raylin98/tweeter/blob/master/public/images/tweeter-mobile.png)
 
-!["Tweeter Mobile Display with no tweet error message"](link)
+!["Tweeter Mobile Display with no tweet error message"](https://github.com/raylin98/tweeter/blob/master/public/images/tweeter-mobile-error1.png)
 
-!["Tweeter Mobile Display with too many characters error message"](link)
+!["Tweeter Mobile Display with too many characters error message"](https://github.com/raylin98/tweeter/blob/master/public/images/tweeter-mobile-error2.png)
 
 
 ## Getting Started
