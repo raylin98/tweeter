@@ -71,7 +71,6 @@ const escape = function (str) {
     //made a new function to load post submit tweet as utilizing loadtweets made duplicate posts
     const newTweet = function() {
       $.get('/tweets', function(tweet) {
-        console.log("1",tweet[tweet.length-1])
         renderTweets([tweet[tweet.length - 1]]);
       })
     }
@@ -84,10 +83,17 @@ const escape = function (str) {
   
 
   const loadTweets = function() {
-    $.get('/tweets', function(tweet) {
-      renderTweets(tweet);
-    })
-  }
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+      success: function(tweet) {
+        renderTweets(tweet);
+      },
+      error: function(error) {
+        console.log(error);
+      }
+    });
+  };
 
   loadTweets();
 });
