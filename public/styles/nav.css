@@ -26,3 +26,10 @@ nav {
 .fa-angle-double-down {
     color:red
 }
+
+@media only screen and (max-width:1023px) {
+    nav {
+        background-color: #001f3b;
+        background-image: url("https://www.transparenttextures.com/patterns/climpek.png");
+    }
+}

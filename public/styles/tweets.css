@@ -77,3 +77,12 @@
 .date-size {
   font-size:20px;
 }
+
+@media only screen and (min-width:1024px) {
+  .tweet-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+}

@@ -14,7 +14,7 @@ section.new-tweet {
   border-left: none;
   border-right: none;
   background-color: transparent;
-	height:1.5em;
+	height:100px;
 	width:100%;
 	font-weight: bold;
 }
@@ -65,4 +65,15 @@ section.new-tweet {
 .fa-circle-exclamation {
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+
+@media (min-width:1024px) {
+	.new-tweet {
+		display:flex;
+		flex-direction: column;
+		float: right;
+		width: 20px;
+}
+
 }

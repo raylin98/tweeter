@@ -93,11 +93,12 @@
           <i class="fa-sharp fa-solid fa-circle-exclamation" style="color:red"></i>
         </span>
       </section>
+      <div class="tweet-box">
       <section class="new-tweet">
       <h2>Compose Tweet</h2>
         <form class="form" method="POST" action="/tweets/" id="tweet-submit">
-          <label class="txt" for="tweet-text">What are you humming about? </label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <label class="txt" for="tweet-text"> </label>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="tweet-button-counter">
             <button class="tweet-button"type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -108,7 +109,7 @@
     <!--Displaying Tweets-->
       <section class="tweet-container" id="tweets-container">
       </section>
-      
+      </div>
     </main>
   </body>
 </html>
