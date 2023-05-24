@@ -2,17 +2,40 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This project was built using Javascript, jQuery, AJAX for the front-end. Express and node was used for the back-end. Stylistic elements of this project was built using HTML and CSS.
+
+## Final Product (With Screenshots)
+
+!["Tweeter Desktop Display"](link)
+
+!["Tweeter Desktop Display with no tweet error message"](link)
+
+!["Tweeter Desktop Display with too many characters error message"](link)
+
+!["Tweeter Mobile Display"](link)
+
+!["Tweeter Mobile Display with no tweet error message"](link)
+
+!["Tweeter Mobile Display with too many characters error message"](link)
+
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
+1. Fork this repository.
+2. Clone your forked repository onto your local device.
 3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+4. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+5. Go to <http://localhost:8080/> in your browser.
+
+## How to use Tweeter
+- After running `npm run local` on the terminal, head over to your browser and access tweeter via <http://localhost:8080/>.
+- Once you are on tweeter, submit your tweet within the text area and clicking on the tweet button.
+- If there are no characters in your tweet, an error message will pop up detailing you that you need to enter something within the tweet box in order for you to post.
+- Addtionally, if there are too many characters in the text-box, the counter will turn red and an error message will alert you that you need to stay within the character limit or you cannot post.
+- Once you are finished using tweeter, you can head back to your terminal and use `ctrl` + `c` to stop the server.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Nodemon
