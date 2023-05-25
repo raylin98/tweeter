@@ -77,6 +77,9 @@ const escape = function (str) {
 
     const formData = $('#tweet-submit').serialize();
       $.post('/tweets', formData).then(newTweet);
+      //resets counter on submission
+      const counter = $('.counter');
+      counter.text(maxLength);
       //clears submission textbox after submission
       $('#tweet-text').val('');
   });
