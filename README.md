@@ -6,17 +6,17 @@ This project was built using Javascript, jQuery, AJAX for the front-end. Express
 
 ## Final Product (With Screenshots)
 
-!["Tweeter Desktop Display"](link)
+!["Tweeter Desktop Display"]()
 
-!["Tweeter Desktop Display with no tweet error message"](link)
+!["Tweeter Desktop Display with no tweet error message"]()
 
-!["Tweeter Desktop Display with too many characters error message"](link)
+!["Tweeter Desktop Display with too many characters error message"]()
 
-!["Tweeter Mobile Display"](link)
+!["Tweeter Mobile Display"]()
 
-!["Tweeter Mobile Display with no tweet error message"](link)
+!["Tweeter Mobile Display with no tweet error message"]()
 
-!["Tweeter Mobile Display with too many characters error message"](link)
+!["Tweeter Mobile Display with too many characters error message"]()
 
 
 ## Getting Started
